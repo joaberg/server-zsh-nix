@@ -4,7 +4,7 @@
 #curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 
 if [ $? -eq 0 ]; then # only run if previous command is a succuess.
-    source .baschrc 
+    source .bashrc 
     #nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager 
     #nix-channel --update 
     #nix-shell '<home-manager>' -A install
