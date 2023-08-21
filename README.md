@@ -15,6 +15,6 @@ Install it from terminal:
 curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/install.sh | bash
 ```
 After install, run bash or zsh to enter a new shell. It will start setting up the new shell.
-Run zsh agin to enter to enjoy your awsome new shell.
+Run zsh again to enjoy your awsome new shell.
 
 
