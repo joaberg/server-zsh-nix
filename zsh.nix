@@ -64,6 +64,7 @@ with pkgs.lib; {
 
             # Launch neofetch
             nitch
+	    echo "To customize prompt, run `p10k configure`"
             '';
            
     };
