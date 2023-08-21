@@ -1,4 +1,4 @@
-Server-zsh-nix
+# Server-zsh-nix
 Quick way to deploy my zsh on different servers, using nix and home-manager.
 
 It installs Nix with the Determinate installer.
@@ -11,7 +11,6 @@ It also adds "zsh" to the end of .bashrc, as a way to launch zsh at login, witho
 
 
 Install it from terminal:
-
 ```
 curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/install.sh | bash
 ```
