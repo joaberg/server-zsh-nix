@@ -9,7 +9,7 @@ with pkgs.lib; {
         fzf # dependency of enhancd
         peco # dependency of enhancd
         zf # dependency of enhancd
-        nerdfonts 
+        meslo-lgs-nf # Nerdfont for p10k theme 
        	git # Needed by zsh / zplug
         nitch # a faster neofetch alternative
         lsd # ls deluxe
@@ -64,7 +64,7 @@ with pkgs.lib; {
 
             # Launch neofetch
             nitch
-	    echo "### To customize prompt, run `p10k configure` ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
+	    echo "### To customize prompt, run 'p10k configure' ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
             '';
            
     };
