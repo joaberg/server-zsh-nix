@@ -24,5 +24,5 @@ if [ $? -eq 0 ]; then # only run if previous command is a succuess.
 fi
 
 
-#home-manager switch
+home-manager switch
 
