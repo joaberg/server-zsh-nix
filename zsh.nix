@@ -66,6 +66,8 @@ with pkgs.lib; {
             # Launch neofetch
             nitch
 	    echo "### To customize prompt, run 'p10k configure' ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
+	    echo "Update to latest zsh.nix: curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
+"
             '';
            
     };
