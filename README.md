@@ -7,7 +7,7 @@ Zsh.nix can be modified as you like, just run "home-manager switch" for the chan
 It also adds "zsh" to the end of .bashrc, as a way to launch zsh at login, without needing root permissions to change the default shell.
 
 
-Install it from terminal:
+### Install it from terminal:
 ```
 curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/install.sh | bash
 ```
@@ -16,7 +16,7 @@ It will start setting up the new shell. \
 Run zsh again to enjoy your awsome new shell.
 
 
-Update existing shell to the newest zsh.nix version:
+### Update existing shell to the newest zsh.nix version:
 ```
 curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
 ```
