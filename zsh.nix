@@ -35,7 +35,8 @@ with pkgs.lib; {
         #enableCompletion = true;
 
         shellAliases = {
-            ll = "lsd -la";
+            ll = "lsd -la";	
+	    l = "lsd";
             home-manager-update = "nix-channel --update && home-manager switch";
             sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
         };
