@@ -16,4 +16,8 @@ It will start setting up the new shell. \
 Run zsh again to enjoy your awsome new shell.
 
 
+Update existing shell to the newest zsh.nix version:
+```
+curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
+```
 
