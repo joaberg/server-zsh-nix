@@ -16,6 +16,7 @@ with pkgs.lib; {
         micro # editor
         neovim # editor
         tldr  # short  man /help
+	htop
 
     ];
 
