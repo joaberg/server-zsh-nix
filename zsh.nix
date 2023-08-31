@@ -42,7 +42,7 @@ with pkgs.lib; {
         colorscheme = dracula-tc;
         keymenu = true;
       }
-    }
+    };
 
 ###
 # ZSH
