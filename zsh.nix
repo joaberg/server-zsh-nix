@@ -41,6 +41,7 @@ with pkgs.lib; {
         #clipboard = "external";
         colorscheme = "dracula-tc";
         keymenu = true;
+	xterm = true;
       };
     };
 
