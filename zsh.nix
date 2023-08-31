@@ -77,6 +77,7 @@ with pkgs.lib; {
             { name = "chisui/zsh-nix-shell"; } # Makes the nix-shell command be zsh instead of bash.
             { name = "zsh-users/zsh-syntax-highlighting"; }
             { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
+            { name = "dracula/zsh"; tags = [ as:theme depth:1 ]; } 
             ];
         };
 
