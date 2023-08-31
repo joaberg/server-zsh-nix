@@ -37,11 +37,11 @@ with pkgs.lib; {
     programs.micro = {
       enable = true;
       settings = {
-        clipboard = terminal;
-        #clipboard = external;
-        colorscheme = dracula-tc;
+        clipboard = "terminal";
+        #clipboard = "external";
+        colorscheme = "dracula-tc";
         keymenu = true;
-      }
+      };
     };
 
 ###
