@@ -64,7 +64,7 @@ with pkgs.lib; {
             x = "exit";
             m = "micro";
             du = "dust";
-            home-manager-update = "nix-channel --update && nix flake update ~/.config/home-manager/ && home-manager switch";
+            home-manager-update = "nix-channel --update && home-manager switch";
             sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
         };
 
