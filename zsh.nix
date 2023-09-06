@@ -60,7 +60,7 @@ with pkgs.lib; {
         shellAliases = {
             ll = "lsd -la";
             l = "lsd";
-            lk = "{cd \$(walk \$@)}";
+            lk = "{cd \$(walk --icons \$@)}";
             x = "exit";
             m = "micro";
             du = "dust";
