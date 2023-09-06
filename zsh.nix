@@ -10,6 +10,7 @@ with pkgs.lib; {
         zf # dependency of enhancd
         meslo-lgs-nf # Nerdfont for p10k theme 
        	git # Needed by zsh / zplug
+	htop
         nitch # a faster neofetch alternative
         lsd # ls deluxe
         #neovim # editor
