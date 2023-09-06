@@ -18,6 +18,8 @@ with pkgs.lib; {
         du-dust # Disk usage tool, dust command
         fd # Find tool
         ripgrep # grep tool, rg command
+	walk # ls/cd navigation tool
+	ranger # filemanager
         xclip # Needed by micro ?
         wl-clipboard # Needed by micro ?
     ];
@@ -57,6 +59,7 @@ with pkgs.lib; {
         shellAliases = {
             ll = "lsd -la";
             l = "lsd";
+	    walk = "walk --icons";
             x = "exit";
             m = "micro";
             du = "dust";
@@ -74,7 +77,7 @@ with pkgs.lib; {
             enable = true;
             plugins = [
                 # List fo plugins: https://github.com/unixorn/awesome-zsh-plugins
-            { name = "b4b4r07/enhancd"; }
+           # { name = "b4b4r07/enhancd"; } # got some buggy behavior on some servers.
             { name = "chisui/zsh-nix-shell"; } # Makes the nix-shell command be zsh instead of bash.
             { name = "zsh-users/zsh-syntax-highlighting"; }
             { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; } # Installations with additional options. For the list of options, please refer to Zplug README.
