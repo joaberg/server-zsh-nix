@@ -21,8 +21,8 @@ with pkgs.lib; {
         ripgrep # grep tool, rg command
 	walk # ls/cd navigation tool
 	ranger # filemanager
-        xclip # Needed by micro ?
-        wl-clipboard # Needed by micro ?
+        #xclip # Needed by micro ?
+        #wl-clipboard # Needed by micro ?
     ];
 
     # Will make the font cache update when needed.
