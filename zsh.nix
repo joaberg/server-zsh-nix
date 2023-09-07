@@ -152,7 +152,7 @@ with pkgs.lib; {
           set -g @dracula-refresh-rate 10
           
           # available plugins: battery, cpu-usage, git, gpu-usage, ram-usage, tmux-ram-usage, network, network-bandwidth, network-ping, attached-clients, network-vpn, weather, time, spotify-tui, kubernetes-context, synchronize-panes
-          set -g @dracula-plugins "cpu-usage ram-usage network-bandwidth"
+          set -g @dracula-plugins "cpu-usage ram-usage"
 
           # available colors: white, gray, dark_gray, light_purple, dark_purple, cyan, green, orange, red, pink, yellow
           # set -g @dracula-[plugin-name]-colors "[background] [foreground]"
