@@ -104,7 +104,8 @@ with pkgs.lib; {
     # This is a workaround. By default most systems launch bash. This will make zsh start when bash is launched. Usefull if you dont have root access.
     programs.bash.enable = true;
     programs.bash.initExtra = ''
-        $HOME/.nix-profile/bin/zsh
+        # $HOME/.nix-profile/bin/zsh
+	tmux attach
     '';
 
 ###
@@ -142,7 +143,7 @@ with pkgs.lib; {
     plugins = with pkgs.tmuxPlugins; [
       sensible
       resurrect
-      yank
+      #yank
       {
         plugin = dracula;
         extraConfig = ''
