@@ -143,7 +143,7 @@ with pkgs.lib; {
     plugins = with pkgs.tmuxPlugins; [
       sensible
       resurrect
-      #yank
+      yank
       {
         plugin = dracula;
         extraConfig = ''
