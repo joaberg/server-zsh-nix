@@ -23,6 +23,8 @@ with pkgs.lib; {
 	ranger # filemanager
         #xclip # Needed by micro ?
         #wl-clipboard # Needed by micro ?
+        bat # Better cat
+
     ];
 
     # Will make the font cache update when needed.
@@ -64,6 +66,7 @@ with pkgs.lib; {
             x = "exit";
             m = "micro";
             du = "dust";
+            cat = "bat";
             home-manager-update = "nix-channel --update && home-manager switch";
             sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
         };
@@ -121,19 +124,31 @@ with pkgs.lib; {
       ];
     };    
     
+###
+# Zoxide
+###
+    programs.zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 
 
 ###
 # Zellij terminal multiplexer
 ###
 
-    programs.zellij = {
+ programs.zellij = {
         enable = true;
-        enableBashIntegration = true;
+        enableZshIntegration = true;
         settings = {
           theme = "dracula";
-          };
+          scrollback_editor = ".nix-profile/bin/micro";
+          default_shell = ".nix-profile/bin/zsh";
+          copy_clipboard = "primary";        
+        };
     };
+
+
 
 
 
