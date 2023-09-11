@@ -11,6 +11,7 @@ with pkgs.lib; {
         meslo-lgs-nf # Nerdfont for p10k theme 
        	git # Needed by zsh / zplug
 	htop
+	btop
         nitch # a faster neofetch alternative
         lsd # ls deluxe
         #neovim # editor
