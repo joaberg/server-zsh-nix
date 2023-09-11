@@ -105,7 +105,6 @@ with pkgs.lib; {
     programs.bash.enable = true;
     programs.bash.initExtra = ''
         # $HOME/.nix-profile/bin/zsh
-	tmux attach
     '';
 
 ###
@@ -125,10 +124,26 @@ with pkgs.lib; {
 
 
 ###
-# TMUX
+# Zellij terminal multiplexer
+###
+
+    programs.zellij = {
+        enable = true;
+        enableBashIntegration = true;
+        settings = {
+          theme = "dracula";
+          };
+    };
+
+
+
+
+
+###
+# TMUX (DISABLED)
 ###
   programs.tmux = {
-    enable = true;
+    enable = false;
 
     shell = "$HOME/.nix-profile/bin/zsh";
 
