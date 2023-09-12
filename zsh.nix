@@ -145,7 +145,7 @@ with pkgs.lib; {
           theme = "dracula";
           scrollback_editor = ".nix-profile/bin/micro";
           default_shell = ".nix-profile/bin/zsh";
-          copy_clipboard = "primary";        
+          #copy_clipboard = "primary";        
         };
     };
 
