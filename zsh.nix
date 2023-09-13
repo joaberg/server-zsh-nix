@@ -9,6 +9,8 @@ with pkgs.lib; {
         peco # dependency of enhancd
         zf # dependency of enhancd
        	git # Needed by zsh / zplug
+        meslo-lgs-nf # Nerdfont  
+        iosevka # Font
 	htop
 	btop
         nitch # a faster neofetch alternative
