@@ -70,7 +70,7 @@ programs.starship = {
     settings = {
       add_newline = false;
       format = ''
-          [](blue)[ ](bg:blue fg:black)$username[](bg:purple fg:blue)$directory[](purple) 
+          [](blue)[ ](bg:blue fg:black)$username$hostname[](bg:purple fg:blue)$directory[](purple) 
           $character
       '';
 
@@ -85,7 +85,11 @@ programs.starship = {
         style = "bg:purple fg:black";
         truncate_to_repo = false;
       };
-
+    hostname = {      
+      ssh_only = true;
+      format = "['🌏 '](bold blue)[$hostname](bold red)";
+      disabled = false;
+    };
       character = {
         success_symbol = "[](bold green)";
         error_symbol = "[](bold red)";
