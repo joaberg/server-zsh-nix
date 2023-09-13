@@ -87,7 +87,7 @@ programs.starship = {
       };
     hostname = {      
       ssh_only = true;
-      format = "[🌏](bg:blue fg:black)[$hostname](bg:blue fg:black)";
+      format = "[ 🌏 ](bg:blue fg:black)[$hostname](bg:blue fg:black)";
       disabled = false;
     };
       character = {
