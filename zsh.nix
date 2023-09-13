@@ -147,7 +147,7 @@ programs.starship = {
          
             # Launch neofetch
             nitch
-	    echo "## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
+	    echo "## Use zellij for terminal multiplexer ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
 	    echo "Update to latest zsh.nix: curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
 "
             '';
@@ -189,7 +189,7 @@ programs.starship = {
 
  programs.zellij = {
         enable = true;
-        enableZshIntegration = true;
+        #enableZshIntegration = true;
         settings = {
           theme = "dracula";
           scrollback_editor = ".nix-profile/bin/micro";
