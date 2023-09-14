@@ -13,7 +13,7 @@ with pkgs.lib; {
         iosevka # Font
 	htop
 	btop
-        nitch # a faster neofetch alternative
+        fastfetch # a faster neofetch alternative
         lsd # ls deluxe
         tldr  # short  man /help
         helix # Modern vim / neovim, hx command
@@ -152,7 +152,7 @@ programs.starship = {
         initExtra = ''
          
             # Launch neofetch
-            nitch
+            fastfetch
 	    echo "## Use zellij for terminal multiplexer ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
 	    echo "Update to latest zsh.nix: curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
 "
@@ -160,7 +160,7 @@ programs.starship = {
            
     };
 
-    # This is a workaround. By default most systems launch bash. This will make zsh start when bash is launched. Usefull if you dont have root access.
+    # This is a workaround. By default most systems launch bash. This will make zsh start when bash is launched. Usefull if you dont want to mess with global settings.
     programs.bash.enable = true;
     programs.bash.initExtra = ''
          $HOME/.nix-profile/bin/zsh
@@ -195,7 +195,7 @@ programs.starship = {
 
  programs.zellij = {
         enable = true;
-        #enableZshIntegration = true;
+        #enableZshIntegration = true; # This will make zellij autostart with the shell
         settings = {
           theme = "dracula";
           scrollback_editor = ".nix-profile/bin/micro";
