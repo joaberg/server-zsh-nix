@@ -11,8 +11,9 @@ with pkgs.lib; {
        	git # Needed by zsh / zplug
         meslo-lgs-nf # Nerdfont  
         iosevka # Font
-	htop
-	btop
+        jetbrains-mono # Font
+        htop
+        btop
         fastfetch # a faster neofetch alternative
         lsd # ls deluxe
         tldr  # short  man /help
@@ -20,18 +21,9 @@ with pkgs.lib; {
         du-dust # Disk usage tool, dust command
         fd # Find tool
         ripgrep # grep tool, rg command
-	walk # ls/cd navigation tool
-	ranger # filemanager
+        walk # ls/cd navigation tool
+        ranger # filemanager
         bat # Better cat
-        (nerdfonts.override {
-          fonts = [
-            "Iosevka"
-            "JetBrainsMono"
-            "IBMPlexMono"
-            "Mononoki"
-            "Monofur"
-          ];
-        })
     ];
 
     # Will make the font cache update when needed.
@@ -124,7 +116,7 @@ programs.starship = {
             du = "dust";
             cat = "bat";
             home-manager-update = "nix-channel --update && home-manager switch";
-            home-manager-cleanup = "nix-collect-garbage &&  home-manager expire-generations \"-3 days\"";
+            home-manager-cleanup = "nix-collect-garbage &&  home-manager expire-generations \"-1 days\" && nix-store --optimise";
             #sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
             snippet-nix-install-zsh = "curl -H \"Cache-Control: no-cache\" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/install.sh | bash";
             snippet-nix-update-zsh = "curl -H \"Cache-Control: no-cache\" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash";
