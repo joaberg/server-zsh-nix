@@ -22,7 +22,8 @@ with pkgs.lib; {
         fd # Find tool
         ripgrep # grep tool, rg command
         walk # ls/cd navigation tool
-        ranger # filemanager
+        #ranger # filemanager
+        lf # filemanager
         bat # Better cat
     ];
 
