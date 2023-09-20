@@ -125,7 +125,7 @@ programs.starship = {
             cat = "bat";
             home-manager-update = "nix-channel --update && home-manager switch";
             home-manager-cleanup = "nix-collect-garbage &&  home-manager expire-generations \"-1 days\" && nix-store --optimise";
-            #sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
+            sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
             snippet-nix-install-zsh = "curl -H \"Cache-Control: no-cache\" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/install.sh | bash";
             snippet-nix-update-zsh = "curl -H \"Cache-Control: no-cache\" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash";
             snippet-sshkey = "[ -d .ssh ] || ssh-keygen -q -t ed25519 -a 32 -f ~/.ssh/id_ed25519 -P \"\"; grep -q \"AAAAC3NzaC1lZDI1NTE5AAAAINp6BOKX6XDOSLye9Vc2y4wbovNtvqFKas73TKgCOqIQ\" ~/.ssh/authorized_keys || echo \"ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINp6BOKX6XDOSLye9Vc2y4wbovNtvqFKas73TKgCOqIQ joakim\" >> ~/.ssh/authorized_keys";
@@ -150,15 +150,33 @@ programs.starship = {
         };
 
         initExtra = ''
-	    # Other Zsh configurations go here
-	# sudo function/alias
+	          # Other Zsh configurations go here
+                  
+            #Override language
+            LC_ALL="en_US.UTF-8"
+
+            # User specific environment
+            if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+            then
+                PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+            fi
+            export PATH
+            
+            #Functions
+	          # sudo function/alias
             sud() {
               sudo ~/.nix-profile/bin/zsh -ic "$*"
             }
+
+
+            # FZF Dracula colors
+            export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+
             # Launch neofetch
             fastfetch
-	    echo "## Use zellij for terminal multiplexer ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
-	    echo "Update to latest zsh.nix: curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
+
+            echo "## Use zellij for terminal multiplexer ## Check 'alias' , defined in .config/home-manager/zsh.nix ##"
+            echo "Update to latest zsh.nix: curl -H "Cache-Control: no-cache" -sSL https://raw.githubusercontent.com/joaberg/server-zsh-nix/main/update.sh | bash
 "
             '';
            
