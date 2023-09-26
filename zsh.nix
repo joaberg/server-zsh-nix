@@ -50,6 +50,13 @@ with pkgs.lib; {
       };
     };
 
+###
+# Yazi (filemanager)
+###
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
 ###
 # Starship prompt
