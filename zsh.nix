@@ -121,7 +121,6 @@ programs.starship = {
             lk = "{cd \$(walk --icons \$@)}";
             x = "exit";
             m = "micro";
-            du = "dust";
             cat = "bat";
             home-manager-update = "nix-channel --update && home-manager switch";
             home-manager-cleanup = "nix-collect-garbage &&  home-manager expire-generations \"-1 days\" && nix-store --optimise";
@@ -165,8 +164,13 @@ programs.starship = {
             #Functions
 	          # sudo function/alias
             sud() {
-              sudo ~/.nix-profile/bin/zsh -ic "$*"
-            }
+                 # Launch a shell with sudo permissions, but still use your users shell etc.
+                if [ $# -eq 0 ]; then
+                  sudo -H -u root env "HOME=$HOME" "USER=$USER" $HOME/.nix-profile/bin/zsh -i
+                else
+                  sudo env "HOME=$HOME" "USER=$USER" $HOME/.nix-profile/bin/zsh -c "$*"
+                fi
+                }
 
 
             # FZF Dracula colors
