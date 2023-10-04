@@ -118,7 +118,6 @@ programs.starship = {
         shellAliases = {
             ll = "lsd -latr";
             l = "lsd";
-            lk = "{cd \$(walk --icons \$@)}";
             x = "exit";
             m = "micro";
             cat = "bat";
