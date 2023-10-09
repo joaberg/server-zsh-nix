@@ -50,6 +50,9 @@ with pkgs.lib; {
       };
     };
 
+
+
+
 ###
 # Yazi (filemanager)
 ###
@@ -120,7 +123,7 @@ programs.starship = {
             l = "lsd";
             x = "exit";
             m = "micro";
-            cat = "bat";
+            cat = "bat -p";
             home-manager-update = "nix-channel --update && home-manager switch";
             home-manager-cleanup = "nix-collect-garbage &&  home-manager expire-generations \"-1 days\" && nix-store --optimise";
             sudonix = "sudo env \"PATH=$PATH\""; # A workaround for preserving the users PATH during sudo, and gives access to programs installed via nix.
