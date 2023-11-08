@@ -30,12 +30,6 @@ with pkgs.lib; {
     # Will make the font cache update when needed.
 	fonts.fontconfig.enable = true;
 
-    # installs autojump, ie use "j dir" to go to a dir you have visited earlier
-    programs.autojump = {
-        enable = true;
-        enableZshIntegration = true;
-    };
-
 ###
 # Micro (editor)
 ###
